@@ -110,6 +110,7 @@ try(i){
 ![alt](/home/dinhtai/IdeaProjects/DataStructureAndAlgorithms/java/week1/queen.png)   
 <img src="https://raw.githubusercontent.com/dangdinhtai0001/DataStructureAndAlgorithms/master/Images/queen.png/?sanitize=true&raw=true" />
 <img src="https://cdn.rawgit.com/dangdinhtai0001/DataStructureAndAlgorithms/master/Images/queen.png" />
+![alt](https://dangdinhtai0001.github.io/DataStructureAndAlgorithms/master/Images/queen.png/?sanitize=true&raw=true)
 <img src="https://cdn.rawgit.com/YourUserAccount/YourProject/master/DirectoryPath/Example.png" />
 ![alt](https://raw.githubusercontent.com/dangdinhtai0001/DataStructureAndAlgorithms/master/Images/queen.png/?sanitize=true&raw=true)
 
