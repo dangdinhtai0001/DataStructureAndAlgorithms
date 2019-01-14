@@ -108,5 +108,4 @@ try(i){
 [2, 0, 3, 1]
 ```
 ![alt](/home/dinhtai/IdeaProjects/DataStructureAndAlgorithms/java/week1/queen.png)   
-![GitHub Logo](/week1/queen.png)
-Format: ![Alt Text](/week1/queen.png)
+
