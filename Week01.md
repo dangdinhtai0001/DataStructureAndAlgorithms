@@ -107,5 +107,6 @@ try(i){
 ```
 [2, 0, 3, 1]
 ```
+<img src="DataStructureAndAlgorithms/Images/queen.png">
 
 
