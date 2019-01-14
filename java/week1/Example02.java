@@ -35,6 +35,13 @@ public class Example02 {
                 return false;
         }
         return true;
-
     }
+    /**
+     Hàm check để kiểm tra xem giá trị j có phù hợp để gán vào vị trí i hay không. Tức là x[i] = j có thỏa mãn hay ko.
+     Ta thực hiện như sau:
+        * Duyệt từ 0 đến i (Tức là duyệt các thành phần đã thêm vào trong mảng x[ ]).Nếu :
+            * x[k] == j : Tức là trong các giá trị ở trong mảng x[i] đã trùng vs j. Hay đã có 1 hàng/cột mà khi đặt hậu
+            vào thì nó sẽ bị ăn.
+            * 2 TH dưới cho các đường chéo thuận và chéo nghịch
+     */
 }

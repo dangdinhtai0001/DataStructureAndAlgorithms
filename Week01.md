@@ -107,6 +107,9 @@ try(i){
 ```
 [2, 0, 3, 1]
 ```
-<img src="https://dangdinhtai0001.github.io/DataStructureAndAlgorithms/Images/queen.png">
+![Cây nhị phân cho bài toán n-Queen](https://dangdinhtai0001.github.io/DataStructureAndAlgorithms/Images/queen.png)
+> Cây nhị phân cho bài toán n-Queen
+
+
 
 
