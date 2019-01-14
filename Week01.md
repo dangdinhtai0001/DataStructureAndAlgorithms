@@ -107,6 +107,6 @@ try(i){
 ```
 [2, 0, 3, 1]
 ```
-<img src="DataStructureAndAlgorithms/Images/queen.png">
+<img src="https://dangdinhtai0001.github.io/DataStructureAndAlgorithms/Images/queen.png">
 
 
