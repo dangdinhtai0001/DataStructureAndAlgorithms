@@ -45,9 +45,9 @@ try(i){
 * **printSolution()** để lấy kết quả ra.
 
 ## **Ví dụ**  
-1. **Liệt kê tất cả các dãy nhị phân có độ dài n.**  
+1. **Liệt kê xâu nhị phân**  
   **Bài toán:**  
-    Liệt kê tất cả các xâu nhị phân có độ dài n.
+    Liệt kê tất cả các xâu nhị phân có độ dài n.  
   **Phân tích**
     * **Dạng nghiệm:** là 1 vector dạng (x1 ; x2 ; ... ; xn). Miền giá trị D của tập nghiệm xi thuộc [0;1].
     * **Mã giả**  
@@ -81,9 +81,43 @@ try(i){
     [1, 1, 1, 0]
     [1, 1, 1, 1]
     ```  
-
-2. **Bài toán n quân hậu**  
-  **Bài toán**  
+ 
+2. **Liệt kê xâu nhị phân có điều kiện**  
+   **Bài toán**  
+   Liệt kê tất cả các xâu nhị phân sao cho không có 2 bit 1 nào đứng cạnh nhau.  
+   **Mô hình hóa**  
+   Mảng x[n] trong đó x[i] in {0,1} là bit thứ i của xâu nhị phân (i = 1, 2 ,3 ,..., n).  
+   Thuộc tính P: Không có 2 bit 1 nào đứng cạnh nhau.  
+   **Mã giả**
+   ```
+     try(i){
+                 for( i thuộc [0,1,2,...,n]){
+                     if(check(i,j)){
+                         x[i] = j;
+                         if( i == n )
+                             printSolution();
+                         else
+                             try(i+1);
+                     }
+                 }
+             } 
+     ```  
+     > *Code chạy đc ở week1/Example03. Kết quả như sau:*  
+     ```
+       [0, 0, 0, 0]
+       [0, 0, 0, 1]
+       [0, 0, 1, 0]
+       [0, 1, 0, 0]
+       [0, 1, 0, 1]
+       [1, 0, 0, 0]
+       [1, 0, 0, 1]
+       [1, 0, 1, 0]
+      ```  
+3. **Liệt kê các tổ hợp**
+4. **Bài toán Sodoku**   
+    **Bài toán** 
+5. **Bài toán n quân hậu**   
+ **Bài toán**  
   Cho một bàn cờ hình vuông kích thước n×n và n quân hậu. Hãy tìm cách đặt n quân hậu trên bàn cờ sao cho không có 2 quân hậu nào có thể ăn được nhau.  
   **Phân tích**  
   Ta thấy để các quan hậu không ăn được nhau, ta phải xếp n qunâ hậu trên n hàng của bàn cờ.Ta dùng mảng x[i] = j ( i = 1,2,3,..,n) để lưu kết quả bài toán.Trong đó, j là cột của quân hậu được đặt tại hàng i.
@@ -95,26 +129,27 @@ try(i){
         * Hai quân hậu không được cùng hàng/cột.   
         * Hai quân hậu bất kì không được cùng 1 đường chéo.  
       * Chú ý: Trên ma trận thì với các đường chéo song song với đường chéo chính thì **(hệ số hàng) - (hệ số cột) là 1 hằng số**. Còn các đường chéo không song song với đường chéo chính thì **(hệ số hàng) + (hệ số cột) là 1 hằng số**.  
-      ![alt](https://dangdinhtai0001.github.io/DataStructureAndAlgorithms/Images/matrix.png)Đường màu đỏ là đường chéo chính.  
+      ![alt](https://dangdinhtai0001.github.io/DataStructureAndAlgorithms/Images/matrix.png)  
+      Đường màu đỏ là đường chéo chính.  
 
+  **Cây nhị phân**  
+    ![Cây nhị phân cho bài toán n-Queen](https://dangdinhtai0001.github.io/DataStructureAndAlgorithms/Images/queen.png)
   **Mã giả**  
-    ```
-    try(i){
-        for( i thuộc [0,1,2,...,n]){
-            if(check(i,j)){
-                x[i] = j;
-                if( i == n )
-                    printSolution();
-                else
-                    try(i+1);
-            }
-        }
-    }
-    ```
-    > code chạy được ở week1/Example02. Kết quả như sau:
-    ```
-    [2, 0, 3, 1]
-    ```  
-
-  ![Cây nhị phân cho bài toán n-Queen](https://dangdinhtai0001.github.io/DataStructureAndAlgorithms/Images/queen.png)
-  > Cây nhị phân cho bài toán n-Queen
+  ```
+  try(i){
+              for( i thuộc [0,1,2,...,n]){
+                  if(check(i,j)){
+                      x[i] = j;
+                      if( i == n )
+                          printSolution();
+                      else
+                          try(i+1);
+                  }
+              }
+          } 
+  ```  
+   > code chạy được ở week1/Example02. Kết quả như sau:
+   ```
+   [2, 0, 3, 1]
+   ```
+    
