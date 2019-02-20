@@ -12,6 +12,6 @@ public class Exercise4 {
             sum[i] = sum[i-1] + j;
             recursion(i+1, r , sum);
         }
-//        r[i] =
+
     }
 }

@@ -1,18 +1,23 @@
 /**
-Cho tập S = { 1,2,...,n}
-    *Liệt kê tất cả các tập con có k phần tử của tập S
-**/
+ * Cho tập S = { 1,2,...,n}
+ * Liệt kê tất cả các tập con có k phần tử của tập S
+ **/
 package week3;
+
+import lombok.Getter;
+import lombok.Setter;
 
 import java.util.Arrays;
 
-public class Exercise1_1 {
-    static int k = 3 ;
-    static int n = 5;
+@Getter
+@Setter
+public class Subset {
+    int k = 3;
+    int n = 5;
+    int[] result;
 
-    public static void main(String[] args) {
-        int[] result = new int[k+1];
-        recursion(1, result);
+    public Subset() {
+        result = new int[k + 1];
     }
 
     /**
@@ -28,19 +33,19 @@ public class Exercise1_1 {
      *  =====> result[i-1] <= result[i] <= n-k+i
      *  vì duyệt từ i - 1 nên duyệt đệ quy từ i = 1
      *
-    **/
-    private static void recursion(int i, int[] result) {
-        for (int j = result[i-1]+1; j <= n-k+i; j++) {
-            result[i] = j ;
-            if(i == k)
+     **/
+    public void recursion(int i, int[] result) {
+        for (int j = result[i - 1] + 1; j <= n - k + i; j++) {
+            result[i] = j;
+            if (i == k)
                 printSolution(result);
             else
-                recursion(i+1,result);
+                recursion(i + 1, result);
 
         }
     }
 
-    private static void printSolution(int[] result) {
+    private void printSolution(int[] result) {
         System.out.println(Arrays.toString(result));
     }
 

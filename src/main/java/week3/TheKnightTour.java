@@ -1,26 +1,27 @@
 package week3;
 
-import java.awt.desktop.SystemSleepEvent;
-import java.util.Arrays;
+import lombok.Getter;
+import lombok.Setter;
 
-public class Exercise3 {
+/**
+ * Mã đi tuần (hay hành trình của quân mã) là bài toán về việc di chuyển một quân mã trên bàn cờ vua (8 x 8). Quân mã
+ * được đặt ở một ô trên một bàn cờ trống nó phải di chuyển theo quy tắc của cờ vua để đi qua mỗi ô trên bàn cờ đúng
+ * một lần.
+ */
+@Getter
+@Setter
+public class TheKnightTour {
 
-    static int moveX[] = {-2, -2, -1, -1, 1, 1, 2, 2};
-    static int moveY[] = {-1, 1, -2, 2, -2, 2, -1, 1};
-    static int n = 5;
-    static int i = 0;
-    static int[][] a = new int[n][n];
-    static int u = 0;
-    static int v = 0;
+    int moveX[] = {-2, -2, -1, -1, 1, 1, 2, 2};
+    int moveY[] = {-1, 1, -2, 2, -2, 2, -1, 1};
+    int n = 5;
+    int i = 0;
+    int[][] a = new int[n][n];
+    int u = 0;
+    int v = 0;
 
 
-    public static void main(String[] args) {
-        System.out.println("HEllo");
-        recursion(2, 2);
-    }
-
-
-    private static void recursion(int x, int y) {
+    public void recursion(int x, int y) {
         i++; // tăng giá trị số bước đi
         a[x][y] = i;
         // Duyệt qua 8 nước đi có thể có của 1 con mã
@@ -51,18 +52,16 @@ public class Exercise3 {
     }
 
 
-
-
-    private static void printSolution() {
+    private void printSolution() {
         for (int j = 0; j < n; j++) {
             for (int k = 0; k < n; k++) {
-                System.out.print(a[j][k] +"\t");
+                System.out.print(a[j][k] + "\t");
             }
             System.out.println();
         }
     }
 
-    private static boolean check(int u, int v) {
+    private boolean check(int u, int v) {
         return (u >= 0 && v >= 0 && u < n && v < n && a[u][v] == 0) == true;
     }
 }
