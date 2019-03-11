@@ -1,3 +1,4 @@
+import Week5.BagBB;
 import junit.framework.TestCase;
 import lombok.NoArgsConstructor;
 import week3.Permutation;
@@ -5,6 +6,8 @@ import week3.Subset;
 import week3.Sudoku;
 import week3.TheKnightTour;
 import week4.Graph;
+import week6.BagGreedy;
+import week6.TSPGreedy;
 
 import java.io.FileNotFoundException;
 
@@ -35,6 +38,21 @@ public class Test extends TestCase {
         Sudoku sudoku = new Sudoku();
         sudoku.Try(0,0);
         sudoku.showMap();
+
+    }
+
+    public void testBagBB(){
+        BagBB bagBB = new BagBB();
+        assertNotNull(bagBB);
+    }
+
+    public void testTSPGreedy(){
+        TSPGreedy tspGreedy = new TSPGreedy();
+
+    }
+
+    public void testBagGreedy(){
+        BagGreedy bagGreedy = new BagGreedy();
 
     }
 }
